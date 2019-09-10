@@ -1,0 +1,115 @@
+[System]
+Name='Sheet1'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=2
+NumRules=37
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='A_/_Range=[1 3]
+NumMFs=3
+MF1='mf1':'gaussmf',[0.4245 1]
+MF2='mf2':'gaussmf',[0.4245 2]
+MF3='mf3':'gaussmf',[0.4245 3]
+
+[Input2]
+Name='SP_/_Range=[10 25]
+NumMFs=4
+MF1='mf1':'gaussmf',[2.124 10]
+MF2='mf2':'gaussmf',[2.124 15]
+MF3='mf3':'gaussmf',[2.124 20]
+MF4='mf4':'gaussmf',[2.124 25]
+
+[Input3]
+Name='gacid/gdry_matter'
+Range=[0.04 0.3]
+NumMFs=8
+MF1='mf1':'gaussmf',[0.01577 0.04]
+MF2='mf2':'gaussmf',[0.01577 0.07714]
+MF3='mf3':'gaussmf',[0.01577 0.1143]
+MF4='mf4':'gaussmf',[0.01577 0.1514]
+MF5='mf5':'gaussmf',[0.01577 0.1886]
+MF6='mf6':'gaussmf',[0.01577 0.2257]
+MF7='mf7':'gaussmf',[0.01577 0.2629]
+MF8='mf8':'gaussmf',[0.01577 0.3]
+
+[Input4]
+Name='t_P_/_min'
+Range=[30 150]
+NumMFs=5
+MF1='mf1':'gaussmf',[12.74 30]
+MF2='mf2':'gaussmf',[12.74 60]
+MF3='mf3':'gaussmf',[12.74 90]
+MF4='mf4':'gaussmf',[12.74 120]
+MF5='mf5':'gaussmf',[12.74 150]
+
+[Output1]
+Name='Digestibility_/_Range=[40 80]
+NumMFs=9
+MF1='mf1':'gaussmf',[2.123 40]
+MF2='mf2':'gaussmf',[2.123 45]
+MF3='mf3':'gaussmf',[2.123 50]
+MF4='mf4':'gaussmf',[2.123 55]
+MF5='mf5':'gaussmf',[2.123 60]
+MF6='mf6':'gaussmf',[2.123 65]
+MF7='mf7':'gaussmf',[2.123 70]
+MF8='mf8':'gaussmf',[2.123 75]
+MF9='mf9':'gaussmf',[2.123 80]
+
+[Output2]
+Name='GYield_/_Range=[28 65]
+NumMFs=9
+MF1='mf1':'gaussmf',[1.964 28]
+MF2='mf2':'gaussmf',[1.964 32.63]
+MF3='mf3':'gaussmf',[1.964 37.25]
+MF4='mf4':'gaussmf',[1.964 41.88]
+MF5='mf5':'gaussmf',[1.964 46.5]
+MF6='mf6':'gaussmf',[1.964 51.13]
+MF7='mf7':'gaussmf',[1.964 55.75]
+MF8='mf8':'gaussmf',[1.964 60.38]
+MF9='mf9':'gaussmf',[1.964 65]
+
+[Rules]
+1 1 3 1, 2 4 (1) : 1
+1 3 1 1, 3 5 (1) : 1
+1 4 1 1, 2 4 (1) : 1
+1 1 3 2, 5 7 (1) : 1
+1 3 1 2, 3 5 (1) : 1
+1 4 1 2, 1 2 (1) : 1
+1 1 3 3, 4 5 (1) : 1
+1 3 1 3, 3 5 (1) : 1
+1 4 1 2, 3 3 (1) : 1
+1 1 3 5, 7 7 (1) : 1
+1 3 1 5, 5 5 (1) : 1
+1 4 1 5, 6 6 (1) : 1
+2 1 5 1, 7 9 (1) : 1
+2 3 3 1, 5 7 (1) : 1
+2 4 2 1, 3 5 (1) : 1
+2 1 5 2, 4 5 (1) : 1
+2 3 3 2, 6 7 (1) : 1
+2 4 2 2, 5 6 (1) : 1
+2 1 5 3, 3 3 (1) : 1
+2 3 3 3, 7 7 (1) : 1
+2 4 2 3, 3 3 (1) : 1
+2 1 5 5, 2 1 (1) : 1
+2 3 3 5, 4 4 (1) : 1
+2 4 2 5, 5 3 (1) : 1
+3 1 8 1, 3 4 (1) : 1
+3 3 4 1, 4 6 (1) : 1
+3 4 3 1, 2 3 (1) : 1
+3 1 8 2, 4 4 (1) : 1
+3 3 4 2, 3 3 (1) : 1
+3 4 3 2, 4 4 (1) : 1
+3 1 8 3, 6 5 (1) : 1
+3 3 4 3, 5 4 (1) : 1
+3 4 3 3, 7 5 (1) : 1
+3 1 8 5, 8 3 (1) : 1
+3 3 4 5, 7 2 (1) : 1
+3 4 3 5, 9 3 (1) : 1
+3 4 3 5, 9 3 (1) : 1
